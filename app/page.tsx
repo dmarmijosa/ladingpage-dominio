@@ -1,9 +1,27 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Code2, Palette, Brain, Cloud, Zap, Shield, Users, ArrowRight, CheckCircle, Star, Menu } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Code2,
+  Palette,
+  Brain,
+  Cloud,
+  Zap,
+  Shield,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Menu,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -15,17 +33,26 @@ export default function LandingPage() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Code2 className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">NexaCode</span>
+            <span className="text-xl font-bold text-white">Danny Armijos</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#services" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href="#services"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               Services
             </Link>
-            <Link href="#about" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href="#about"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               About
             </Link>
-            <Link href="#contact" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href="#contact"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               Contact
             </Link>
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
@@ -58,8 +85,9 @@ export default function LandingPage() {
                   Software
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  Transform your business with cutting-edge SaaS solutions, intelligent design, and AI-driven software
-                  construction. We craft digital experiences that scale.
+                  Transform your business with cutting-edge SaaS solutions,
+                  intelligent design, and AI-driven software construction. We
+                  craft digital experiences that scale.
                 </p>
               </div>
 
@@ -83,11 +111,15 @@ export default function LandingPage() {
               <div className="flex items-center space-x-8 pt-8">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">500+</div>
-                  <div className="text-sm text-gray-400">Projects Delivered</div>
+                  <div className="text-sm text-gray-400">
+                    Projects Delivered
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">98%</div>
-                  <div className="text-sm text-gray-400">Client Satisfaction</div>
+                  <div className="text-sm text-gray-400">
+                    Client Satisfaction
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">24/7</div>
@@ -99,7 +131,7 @@ export default function LandingPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-3xl opacity-30"></div>
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/placeholder.jpeg"
                 alt="Futuristic Software Dashboard"
                 width={600}
                 height={600}
@@ -114,9 +146,12 @@ export default function LandingPage() {
       <section id="services" className="py-20 lg:py-32 relative">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">Our Core Services</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Our Core Services
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We specialize in cutting-edge technologies that drive business transformation and innovation
+              We specialize in cutting-edge technologies that drive business
+              transformation and innovation
             </p>
           </div>
 
@@ -126,12 +161,14 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Cloud className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl">SaaS Solutions</CardTitle>
+                <CardTitle className="text-white text-xl">
+                  SaaS Solutions
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Scalable cloud-based software solutions tailored to your business needs with enterprise-grade
-                  security.
+                  Scalable cloud-based software solutions tailored to your
+                  business needs with enterprise-grade security.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -141,11 +178,14 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Code2 className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl">Software Construction</CardTitle>
+                <CardTitle className="text-white text-xl">
+                  Software Construction
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Custom software development from concept to deployment using modern frameworks and best practices.
+                  Custom software development from concept to deployment using
+                  modern frameworks and best practices.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -155,11 +195,14 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Palette className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl">Design Excellence</CardTitle>
+                <CardTitle className="text-white text-xl">
+                  Design Excellence
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  User-centered design that combines aesthetics with functionality for exceptional user experiences.
+                  User-centered design that combines aesthetics with
+                  functionality for exceptional user experiences.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -169,11 +212,14 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl">AI Integration</CardTitle>
+                <CardTitle className="text-white text-xl">
+                  AI Integration
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Intelligent automation and AI-powered features that enhance productivity and decision-making.
+                  Intelligent automation and AI-powered features that enhance
+                  productivity and decision-making.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -186,36 +232,56 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8">Why Choose NexaCode?</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8">
+                Why Choose NexaCode?
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Enterprise-Grade Security</h4>
+                    <h4 className="text-white font-semibold mb-2">
+                      Enterprise-Grade Security
+                    </h4>
                     <p className="text-gray-300">
-                      Advanced security protocols and compliance standards to protect your data.
+                      Advanced security protocols and compliance standards to
+                      protect your data.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Scalable Architecture</h4>
-                    <p className="text-gray-300">Built to grow with your business, from startup to enterprise scale.</p>
+                    <h4 className="text-white font-semibold mb-2">
+                      Scalable Architecture
+                    </h4>
+                    <p className="text-gray-300">
+                      Built to grow with your business, from startup to
+                      enterprise scale.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-white font-semibold mb-2">AI-Powered Insights</h4>
-                    <p className="text-gray-300">Leverage artificial intelligence for smarter business decisions.</p>
+                    <h4 className="text-white font-semibold mb-2">
+                      AI-Powered Insights
+                    </h4>
+                    <p className="text-gray-300">
+                      Leverage artificial intelligence for smarter business
+                      decisions.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-white font-semibold mb-2">24/7 Expert Support</h4>
-                    <p className="text-gray-300">Round-the-clock technical support from our experienced team.</p>
+                    <h4 className="text-white font-semibold mb-2">
+                      24/7 Expert Support
+                    </h4>
+                    <p className="text-gray-300">
+                      Round-the-clock technical support from our experienced
+                      team.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -223,7 +289,7 @@ export default function LandingPage() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/placeholder-2.avif?height=500&width=600"
                 alt="Software Architecture"
                 width={600}
                 height={500}
@@ -238,11 +304,15 @@ export default function LandingPage() {
       <section id="about" className="py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">About NexaCode</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              About NexaCode
+            </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We are a forward-thinking software company dedicated to transforming businesses through innovative SaaS
-              solutions, intelligent design, and cutting-edge AI integration. Our team of experts combines technical
-              excellence with creative vision to deliver software that not only meets today's needs but anticipates
+              We are a forward-thinking software company dedicated to
+              transforming businesses through innovative SaaS solutions,
+              intelligent design, and cutting-edge AI integration. Our team of
+              experts combines technical excellence with creative vision to
+              deliver software that not only meets today's needs but anticipates
               tomorrow's challenges.
             </p>
           </div>
@@ -252,10 +322,12 @@ export default function LandingPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Expert Team
+              </h3>
               <p className="text-gray-300">
-                Our diverse team of developers, designers, and AI specialists brings years of experience and innovation
-                to every project.
+                Our diverse team of developers, designers, and AI specialists
+                brings years of experience and innovation to every project.
               </p>
             </div>
 
@@ -263,10 +335,12 @@ export default function LandingPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Proven Track Record</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Proven Track Record
+              </h3>
               <p className="text-gray-300">
-                With hundreds of successful projects and satisfied clients, we have established ourselves as a trusted
-                technology partner.
+                With hundreds of successful projects and satisfied clients, we
+                have established ourselves as a trusted technology partner.
               </p>
             </div>
 
@@ -274,10 +348,12 @@ export default function LandingPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Innovation First</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Innovation First
+              </h3>
               <p className="text-gray-300">
-                We stay ahead of technology trends, ensuring our solutions leverage the latest advancements in software
-                development and AI.
+                We stay ahead of technology trends, ensuring our solutions
+                leverage the latest advancements in software development and AI.
               </p>
             </div>
           </div>
@@ -288,7 +364,9 @@ export default function LandingPage() {
       <section className="py-20 lg:py-32 bg-black/20">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              What Our Clients Say
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -296,12 +374,16 @@ export default function LandingPage() {
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "NexaCode transformed our business with their innovative SaaS solution. The AI integration has
-                  improved our efficiency by 300%."
+                  "NexaCode transformed our business with their innovative SaaS
+                  solution. The AI integration has improved our efficiency by
+                  300%."
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
@@ -319,20 +401,27 @@ export default function LandingPage() {
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "The design excellence and attention to detail exceeded our expectations. Our users love the new
-                  interface."
+                  "The design excellence and attention to detail exceeded our
+                  expectations. Our users love the new interface."
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold">MJ</span>
                   </div>
                   <div>
-                    <div className="text-white font-semibold">Maria Johnson</div>
-                    <div className="text-gray-400 text-sm">Product Manager, InnovateLab</div>
+                    <div className="text-white font-semibold">
+                      Maria Johnson
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      Product Manager, InnovateLab
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -342,12 +431,15 @@ export default function LandingPage() {
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "Professional, reliable, and innovative. NexaCode delivered exactly what we needed, on time and within
-                  budget."
+                  "Professional, reliable, and innovative. NexaCode delivered
+                  exactly what we needed, on time and within budget."
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
@@ -368,10 +460,13 @@ export default function LandingPage() {
       <section id="contact" className="py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our SaaS solutions, design expertise, and AI integration can accelerate your growth. Get
-              started with a free consultation today.
+              Let's discuss how our SaaS solutions, design expertise, and AI
+              integration can accelerate your growth. Get started with a free
+              consultation today.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -402,7 +497,9 @@ export default function LandingPage() {
                   Subscribe
                 </Button>
               </div>
-              <p className="text-sm text-gray-400 mt-3">Join 10,000+ businesses already transforming with NexaCode</p>
+              <p className="text-sm text-gray-400 mt-3">
+                Join 10,000+ businesses already transforming with NexaCode
+              </p>
             </div>
           </div>
         </div>
@@ -420,7 +517,8 @@ export default function LandingPage() {
                 <span className="text-xl font-bold text-white">NexaCode</span>
               </div>
               <p className="text-gray-400">
-                Transforming businesses through innovative SaaS solutions, intelligent design, and AI integration.
+                Transforming businesses through innovative SaaS solutions,
+                intelligent design, and AI integration.
               </p>
             </div>
 
@@ -504,15 +602,26 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} NexaCode. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} NexaCode. All rights reserved.
+            </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Privacy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Terms
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Cookies
               </Link>
             </div>
@@ -520,5 +629,5 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

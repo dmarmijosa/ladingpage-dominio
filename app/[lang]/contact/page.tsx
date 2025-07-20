@@ -1,56 +1,66 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Code2, Mail, MapPin, Send, Clock } from "lucide-react"
-import Link from "next/link"
-import { getDictionary } from "@/lib/dictionaries"
-import { LanguageSwitcher } from "@/components/language-switcher"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Code2, Mail, MapPin, Send, Clock } from "lucide-react";
+import Link from "next/link";
+import { getDictionary } from "@/lib/dictionaries";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { useState, useEffect } from "react";
 
 interface PageProps {
-  params: Promise<{ lang: "en" | "es" }>
+  params: Promise<{ lang: "en" | "es" }>;
 }
 
 export default function ContactPage({ params }: PageProps) {
-  const [lang, setLang] = useState<"en" | "es">("en")
-  const [dict, setDict] = useState<any>(null)
+  const [lang, setLang] = useState<"en" | "es">("en");
+  const [dict, setDict] = useState<any>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
     service: "",
     message: "",
-  })
+  });
 
   useEffect(() => {
     const loadData = async () => {
-      const resolvedParams = await params
-      setLang(resolvedParams.lang)
-      const dictionary = await getDictionary(resolvedParams.lang)
-      setDict(dictionary)
-    }
-    loadData()
-  }, [params])
+      const resolvedParams = await params;
+      setLang(resolvedParams.lang);
+      const dictionary = await getDictionary(resolvedParams.lang);
+      setDict(dictionary);
+    };
+    loadData();
+  }, [params]);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    alert(lang === "en" ? "Message sent successfully!" : "¡Mensaje enviado exitosamente!")
-  }
+    console.log("Form submitted:", formData);
+    alert(
+      lang === "en"
+        ? "Message sent successfully!"
+        : "¡Mensaje enviado exitosamente!"
+    );
+  };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   if (!dict) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
@@ -62,17 +72,26 @@ export default function ContactPage({ params }: PageProps) {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Code2 className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">NexaCode</span>
+            <span className="text-xl font-bold text-white">Danny Armijos</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href={`/${lang}/services`} className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href={`/${lang}/services`}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               {dict.nav.services}
             </Link>
-            <Link href={`/${lang}/about`} className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href={`/${lang}/about`}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               {dict.nav.about}
             </Link>
-            <Link href={`/${lang}/contact`} className="text-white font-semibold">
+            <Link
+              href={`/${lang}/contact`}
+              className="text-white font-semibold"
+            >
               {dict.nav.contact}
             </Link>
             <LanguageSwitcher currentLocale={lang} />
@@ -117,9 +136,15 @@ export default function ContactPage({ params }: PageProps) {
                       <Input
                         type="text"
                         value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("name", e.target.value)
+                        }
                         className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                        placeholder={lang === "en" ? "Your full name" : "Tu nombre completo"}
+                        placeholder={
+                          lang === "en"
+                            ? "Your full name"
+                            : "Tu nombre completo"
+                        }
                         required
                       />
                     </div>
@@ -130,9 +155,13 @@ export default function ContactPage({ params }: PageProps) {
                       <Input
                         type="email"
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                        placeholder={lang === "en" ? "your@email.com" : "tu@email.com"}
+                        placeholder={
+                          lang === "en" ? "your@email.com" : "tu@email.com"
+                        }
                         required
                       />
                     </div>
@@ -145,31 +174,62 @@ export default function ContactPage({ params }: PageProps) {
                     <Input
                       type="text"
                       value={formData.company}
-                      onChange={(e) => handleInputChange("company", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("company", e.target.value)
+                      }
                       className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      placeholder={lang === "en" ? "Your company name" : "Nombre de tu empresa"}
+                      placeholder={
+                        lang === "en"
+                          ? "Your company name"
+                          : "Nombre de tu empresa"
+                      }
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      {lang === "en" ? "Service Interest" : "Servicio de Interés"}
+                      {lang === "en"
+                        ? "Service Interest"
+                        : "Servicio de Interés"}
                     </label>
-                    <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
+                    <Select
+                      value={formData.service}
+                      onValueChange={(value) =>
+                        handleInputChange("service", value)
+                      }
+                    >
                       <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                        <SelectValue placeholder={lang === "en" ? "Select a service" : "Selecciona un servicio"} />
+                        <SelectValue
+                          placeholder={
+                            lang === "en"
+                              ? "Select a service"
+                              : "Selecciona un servicio"
+                          }
+                        />
                       </SelectTrigger>
                       <SelectContent className="bg-black/90 border-white/20">
-                        <SelectItem value="saas" className="text-white hover:bg-white/10">
+                        <SelectItem
+                          value="saas"
+                          className="text-white hover:bg-white/10"
+                        >
                           {dict.services.saas.title}
                         </SelectItem>
-                        <SelectItem value="construction" className="text-white hover:bg-white/10">
+                        <SelectItem
+                          value="construction"
+                          className="text-white hover:bg-white/10"
+                        >
                           {dict.services.construction.title}
                         </SelectItem>
-                        <SelectItem value="design" className="text-white hover:bg-white/10">
+                        <SelectItem
+                          value="design"
+                          className="text-white hover:bg-white/10"
+                        >
                           {dict.services.design.title}
                         </SelectItem>
-                        <SelectItem value="ai" className="text-white hover:bg-white/10">
+                        <SelectItem
+                          value="ai"
+                          className="text-white hover:bg-white/10"
+                        >
                           {dict.services.ai.title}
                         </SelectItem>
                       </SelectContent>
@@ -182,7 +242,9 @@ export default function ContactPage({ params }: PageProps) {
                     </label>
                     <Textarea
                       value={formData.message}
-                      onChange={(e) => handleInputChange("message", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("message", e.target.value)
+                      }
                       className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[120px]"
                       placeholder={
                         lang === "en"
@@ -215,9 +277,14 @@ export default function ContactPage({ params }: PageProps) {
                     </h3>
                   </div>
                   <p className="text-gray-300 mb-2">
-                    {lang === "en" ? "For general inquiries and support:" : "Para consultas generales y soporte:"}
+                    {lang === "en"
+                      ? "For general inquiries and support:"
+                      : "Para consultas generales y soporte:"}
                   </p>
-                  <a href="mailto:support-client@dmarmijosa.com" className="text-blue-400 hover:text-blue-300">
+                  <a
+                    href="mailto:support-client@dmarmijosa.com"
+                    className="text-blue-400 hover:text-blue-300"
+                  >
                     support-client@dmarmijosa.com
                   </a>
                 </CardContent>
@@ -232,9 +299,19 @@ export default function ContactPage({ params }: PageProps) {
                     </h3>
                   </div>
                   <div className="space-y-2 text-gray-300">
-                    <p>{lang === "en" ? "Monday - Friday: 9:00 AM - 6:00 PM" : "Lunes - Viernes: 9:00 AM - 6:00 PM"}</p>
-                    <p>{lang === "en" ? "Saturday: 10:00 AM - 4:00 PM" : "Sábado: 10:00 AM - 4:00 PM"}</p>
-                    <p>{lang === "en" ? "Sunday: Closed" : "Domingo: Cerrado"}</p>
+                    <p>
+                      {lang === "en"
+                        ? "Monday - Friday: 9:00 AM - 6:00 PM"
+                        : "Lunes - Viernes: 9:00 AM - 6:00 PM"}
+                    </p>
+                    <p>
+                      {lang === "en"
+                        ? "Saturday: 10:00 AM - 4:00 PM"
+                        : "Sábado: 10:00 AM - 4:00 PM"}
+                    </p>
+                    <p>
+                      {lang === "en" ? "Sunday: Closed" : "Domingo: Cerrado"}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -255,10 +332,12 @@ export default function ContactPage({ params }: PageProps) {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 backdrop-blur-sm">
+              <Card className="bg-gradient-to-r border-blue-500/30 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    {lang === "en" ? "Quick Response Guarantee" : "Garantía de Respuesta Rápida"}
+                    {lang === "en"
+                      ? "Quick Response Guarantee"
+                      : "Garantía de Respuesta Rápida"}
                   </h3>
                   <p className="text-gray-300">
                     {lang === "en"
@@ -272,5 +351,5 @@ export default function ContactPage({ params }: PageProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }

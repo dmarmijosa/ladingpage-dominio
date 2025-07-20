@@ -1,17 +1,33 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code2, Palette, Brain, Cloud, ArrowRight, CheckCircle, Database, Smartphone, Globe } from "lucide-react"
-import Link from "next/link"
-import { getDictionary } from "@/lib/dictionaries"
-import { LanguageSwitcher } from "@/components/language-switcher"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Code2,
+  Palette,
+  Brain,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Database,
+  Smartphone,
+  Globe,
+} from "lucide-react";
+import Link from "next/link";
+import { getDictionary } from "@/lib/dictionaries";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 interface PageProps {
-  params: Promise<{ lang: "en" | "es" }>
+  params: Promise<{ lang: "en" | "es" }>;
 }
 
 export default async function ServicesPage({ params }: PageProps) {
-  const { lang } = await params
-  const dict = await getDictionary(lang)
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -22,17 +38,26 @@ export default async function ServicesPage({ params }: PageProps) {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Code2 className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">NexaCode</span>
+            <span className="text-xl font-bold text-white">Danny Armijos</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href={`/${lang}/services`} className="text-white font-semibold">
+            <Link
+              href={`/${lang}/services`}
+              className="text-white font-semibold"
+            >
               {dict.nav.services}
             </Link>
-            <Link href={`/${lang}/about`} className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href={`/${lang}/about`}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               {dict.nav.about}
             </Link>
-            <Link href={`/${lang}/contact`} className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href={`/${lang}/contact`}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               {dict.nav.contact}
             </Link>
             <LanguageSwitcher currentLocale={lang} />
@@ -49,8 +74,12 @@ export default async function ServicesPage({ params }: PageProps) {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">{dict.services.title}</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{dict.services.description}</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              {dict.services.title}
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {dict.services.description}
+            </p>
           </div>
         </div>
       </section>
@@ -64,21 +93,31 @@ export default async function ServicesPage({ params }: PageProps) {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
                   <Cloud className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-white">{dict.services.saas.title}</h2>
+                <h2 className="text-3xl font-bold text-white">
+                  {dict.services.saas.title}
+                </h2>
               </div>
-              <p className="text-gray-300 text-lg mb-6">{dict.services.saas.description}</p>
+              <p className="text-gray-300 text-lg mb-6">
+                {dict.services.saas.description}
+              </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Multi-tenant architecture" : "Arquitectura multi-inquilino"}
+                  {lang === "en"
+                    ? "Multi-tenant architecture"
+                    : "Arquitectura multi-inquilino"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Auto-scaling infrastructure" : "Infraestructura de auto-escalado"}
+                  {lang === "en"
+                    ? "Auto-scaling infrastructure"
+                    : "Infraestructura de auto-escalado"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "API-first development" : "Desarrollo API-first"}
+                  {lang === "en"
+                    ? "API-first development"
+                    : "Desarrollo API-first"}
                 </li>
               </ul>
             </Card>
@@ -88,17 +127,25 @@ export default async function ServicesPage({ params }: PageProps) {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
                   <Code2 className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-white">{dict.services.construction.title}</h2>
+                <h2 className="text-3xl font-bold text-white">
+                  {dict.services.construction.title}
+                </h2>
               </div>
-              <p className="text-gray-300 text-lg mb-6">{dict.services.construction.description}</p>
+              <p className="text-gray-300 text-lg mb-6">
+                {dict.services.construction.description}
+              </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Full-stack development" : "Desarrollo full-stack"}
+                  {lang === "en"
+                    ? "Full-stack development"
+                    : "Desarrollo full-stack"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Microservices architecture" : "Arquitectura de microservicios"}
+                  {lang === "en"
+                    ? "Microservices architecture"
+                    : "Arquitectura de microservicios"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
@@ -112,21 +159,31 @@ export default async function ServicesPage({ params }: PageProps) {
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4">
                   <Palette className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-white">{dict.services.design.title}</h2>
+                <h2 className="text-3xl font-bold text-white">
+                  {dict.services.design.title}
+                </h2>
               </div>
-              <p className="text-gray-300 text-lg mb-6">{dict.services.design.description}</p>
+              <p className="text-gray-300 text-lg mb-6">
+                {dict.services.design.description}
+              </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "User experience research" : "Investigación de experiencia de usuario"}
+                  {lang === "en"
+                    ? "User experience research"
+                    : "Investigación de experiencia de usuario"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Responsive design systems" : "Sistemas de diseño responsivo"}
+                  {lang === "en"
+                    ? "Responsive design systems"
+                    : "Sistemas de diseño responsivo"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Brand identity development" : "Desarrollo de identidad de marca"}
+                  {lang === "en"
+                    ? "Brand identity development"
+                    : "Desarrollo de identidad de marca"}
                 </li>
               </ul>
             </Card>
@@ -136,21 +193,31 @@ export default async function ServicesPage({ params }: PageProps) {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-white">{dict.services.ai.title}</h2>
+                <h2 className="text-3xl font-bold text-white">
+                  {dict.services.ai.title}
+                </h2>
               </div>
-              <p className="text-gray-300 text-lg mb-6">{dict.services.ai.description}</p>
+              <p className="text-gray-300 text-lg mb-6">
+                {dict.services.ai.description}
+              </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Machine learning models" : "Modelos de aprendizaje automático"}
+                  {lang === "en"
+                    ? "Machine learning models"
+                    : "Modelos de aprendizaje automático"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Natural language processing" : "Procesamiento de lenguaje natural"}
+                  {lang === "en"
+                    ? "Natural language processing"
+                    : "Procesamiento de lenguaje natural"}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  {lang === "en" ? "Predictive analytics" : "Análisis predictivo"}
+                  {lang === "en"
+                    ? "Predictive analytics"
+                    : "Análisis predictivo"}
                 </li>
               </ul>
             </Card>
@@ -170,7 +237,9 @@ export default async function ServicesPage({ params }: PageProps) {
                   <Database className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-white text-xl">
-                  {lang === "en" ? "Database Design" : "Diseño de Base de Datos"}
+                  {lang === "en"
+                    ? "Database Design"
+                    : "Diseño de Base de Datos"}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -222,7 +291,9 @@ export default async function ServicesPage({ params }: PageProps) {
           {/* CTA Section */}
           <div className="text-center mt-20">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              {lang === "en" ? "Ready to Get Started?" : "¿Listo para Comenzar?"}
+              {lang === "en"
+                ? "Ready to Get Started?"
+                : "¿Listo para Comenzar?"}
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               {lang === "en"
@@ -242,5 +313,5 @@ export default async function ServicesPage({ params }: PageProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }
