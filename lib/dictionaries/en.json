@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Next-Generation SaaS Solutions",
+    "title": "Build the Future with",
+    "titleHighlight": "AI-Powered",
+    "titleEnd": "Software",
+    "description": "Transform your business with cutting-edge SaaS solutions, intelligent design, and AI-driven software construction. We craft digital experiences that scale with precision and innovation.",
+    "startProject": "Start Your Project",
+    "viewWork": "View Our Work",
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction",
+      "support": "Support"
+    }
+  },
+  "services": {
+    "title": "Our Core Services",
+    "description": "We specialize in cutting-edge technologies that drive business transformation and innovation",
+    "saas": {
+      "title": "SaaS Solutions",
+      "description": "Scalable cloud-based software solutions tailored to your business needs with enterprise-grade security and performance."
+    },
+    "construction": {
+      "title": "Software Construction",
+      "description": "Custom software development from concept to deployment using modern frameworks, agile methodologies, and best practices."
+    },
+    "design": {
+      "title": "Design Excellence",
+      "description": "User-centered design that combines aesthetics with functionality for exceptional user experiences and brand identity."
+    },
+    "ai": {
+      "title": "AI Integration",
+      "description": "Intelligent automation and AI-powered features that enhance productivity, decision-making, and business intelligence."
+    }
+  },
+  "features": {
+    "title": "Why Choose Our Solutions?",
+    "security": {
+      "title": "Enterprise-Grade Security",
+      "description": "Advanced security protocols and compliance standards to protect your data and ensure business continuity."
+    },
+    "scalable": {
+      "title": "Scalable Architecture",
+      "description": "Built to grow with your business, from startup to enterprise scale with cloud-native technologies."
+    },
+    "insights": {
+      "title": "AI-Powered Insights",
+      "description": "Leverage artificial intelligence and machine learning for smarter business decisions and predictive analytics."
+    },
+    "support": {
+      "title": "24/7 Expert Support",
+      "description": "Round-the-clock technical support from our experienced team of developers and solution architects."
+    }
+  },
+  "about": {
+    "title": "About Our Company",
+    "description": "We are a forward-thinking software company dedicated to transforming businesses through innovative SaaS solutions, intelligent design, and cutting-edge AI integration. Our team combines technical excellence with creative vision to deliver software that anticipates tomorrow's challenges.",
+    "team": {
+      "title": "Expert Team",
+      "description": "Our diverse team of developers, designers, and AI specialists brings years of experience and innovation to every project."
+    },
+    "track": {
+      "title": "Proven Track Record",
+      "description": "With hundreds of successful projects and satisfied clients, we have established ourselves as a trusted technology partner."
+    },
+    "innovation": {
+      "title": "Innovation First",
+      "description": "We stay ahead of technology trends, ensuring our solutions leverage the latest advancements in software development and AI."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "client1": {
+      "text": "This company transformed our business with their innovative SaaS solution. The AI integration has improved our efficiency by 300%.",
+      "name": "John Smith",
+      "role": "CEO, TechCorp"
+    },
+    "client2": {
+      "text": "The design excellence and attention to detail exceeded our expectations. Our users love the new interface and functionality.",
+      "name": "Maria Johnson",
+      "role": "Product Manager, InnovateLab"
+    },
+    "client3": {
+      "text": "Professional, reliable, and innovative. They delivered exactly what we needed, on time and within budget.",
+      "name": "David Lee",
+      "role": "CTO, StartupXYZ"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Let's discuss how our SaaS solutions, design expertise, and AI integration can accelerate your growth. Get started with a free consultation today.",
+    "consultation": "Schedule Free Consultation",
+    "portfolio": "View Portfolio",
+    "emailPlaceholder": "Enter your email for updates",
+    "subscribe": "Subscribe",
+    "joinText": "Join 10,000+ businesses already transforming with our solutions"
+  },
+  "footer": {
+    "description": "Transforming businesses through innovative SaaS solutions, intelligent design, and AI integration.",
+    "services": "Services",
+    "company": "Company",
+    "support": "Support",
+    "links": {
+      "saasDev": "SaaS Development",
+      "customSoftware": "Custom Software",
+      "uiux": "UI/UX Design",
+      "aiIntegration": "AI Integration",
+      "aboutUs": "About Us",
+      "team": "Our Team",
+      "careers": "Careers",
+      "contact": "Contact",
+      "docs": "Documentation",
+      "help": "Help Center",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "All rights reserved.",
+    "bottomLinks": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "badge": "Soluciones SaaS de Nueva Generación",
+    "title": "Construye el Futuro con",
+    "titleHighlight": "Software Potenciado por IA",
+    "titleEnd": "",
+    "description": "Transforma tu negocio con soluciones SaaS de vanguardia, diseño inteligente y construcción de software impulsada por IA. Creamos experiencias digitales que escalan con precisión e innovación.",
+    "startProject": "Iniciar Tu Proyecto",
+    "viewWork": "Ver Nuestro Trabajo",
+    "stats": {
+      "projects": "Proyectos Entregados",
+      "satisfaction": "Satisfacción del Cliente",
+      "support": "Soporte"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios Principales",
+    "description": "Nos especializamos en tecnologías de vanguardia que impulsan la transformación e innovación empresarial",
+    "saas": {
+      "title": "Soluciones SaaS",
+      "description": "Soluciones de software escalables basadas en la nube, adaptadas a las necesidades de tu negocio con seguridad y rendimiento de nivel empresarial."
+    },
+    "construction": {
+      "title": "Construcción de Software",
+      "description": "Desarrollo de software personalizado desde el concepto hasta la implementación utilizando frameworks modernos, metodologías ágiles y mejores prácticas."
+    },
+    "design": {
+      "title": "Excelencia en Diseño",
+      "description": "Diseño centrado en el usuario que combina estética con funcionalidad para experiencias excepcionales e identidad de marca."
+    },
+    "ai": {
+      "title": "Integración de IA",
+      "description": "Automatización inteligente y características potenciadas por IA que mejoran la productividad, toma de decisiones e inteligencia empresarial."
+    }
+  },
+  "features": {
+    "title": "¿Por Qué Elegir Nuestras Soluciones?",
+    "security": {
+      "title": "Seguridad de Nivel Empresarial",
+      "description": "Protocolos de seguridad avanzados y estándares de cumplimiento para proteger tus datos y asegurar la continuidad del negocio."
+    },
+    "scalable": {
+      "title": "Arquitectura Escalable",
+      "description": "Construido para crecer con tu negocio, desde startup hasta escala empresarial con tecnologías nativas de la nube."
+    },
+    "insights": {
+      "title": "Insights Potenciados por IA",
+      "description": "Aprovecha la inteligencia artificial y el aprendizaje automático para decisiones empresariales más inteligentes y análisis predictivos."
+    },
+    "support": {
+      "title": "Soporte Experto 24/7",
+      "description": "Soporte técnico las 24 horas de nuestro equipo experimentado de desarrolladores y arquitectos de soluciones."
+    }
+  },
+  "about": {
+    "title": "Acerca de Nuestra Empresa",
+    "description": "Somos una empresa de software visionaria dedicada a transformar negocios a través de soluciones SaaS innovadoras, diseño inteligente e integración de IA de vanguardia. Nuestro equipo combina excelencia técnica con visión creativa para entregar software que anticipa los desafíos del mañana.",
+    "team": {
+      "title": "Equipo Experto",
+      "description": "Nuestro equipo diverso de desarrolladores, diseñadores y especialistas en IA aporta años de experiencia e innovación a cada proyecto."
+    },
+    "track": {
+      "title": "Historial Comprobado",
+      "description": "Con cientos de proyectos exitosos y clientes satisfechos, nos hemos establecido como un socio tecnológico confiable."
+    },
+    "innovation": {
+      "title": "Innovación Primero",
+      "description": "Nos mantenemos a la vanguardia de las tendencias tecnológicas, asegurando que nuestras soluciones aprovechen los últimos avances en desarrollo de software e IA."
+    }
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "client1": {
+      "text": "Esta empresa transformó nuestro negocio con su solución SaaS innovadora. La integración de IA ha mejorado nuestra eficiencia en un 300%.",
+      "name": "Juan Smith",
+      "role": "CEO, TechCorp"
+    },
+    "client2": {
+      "text": "La excelencia en diseño y atención al detalle superó nuestras expectativas. A nuestros usuarios les encanta la nueva interfaz y funcionalidad.",
+      "name": "María Johnson",
+      "role": "Gerente de Producto, InnovateLab"
+    },
+    "client3": {
+      "text": "Profesional, confiable e innovador. Entregaron exactamente lo que necesitábamos, a tiempo y dentro del presupuesto.",
+      "name": "David Lee",
+      "role": "CTO, StartupXYZ"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Transformar Tu Negocio?",
+    "description": "Hablemos sobre cómo nuestras soluciones SaaS, experiencia en diseño e integración de IA pueden acelerar tu crecimiento. Comienza con una consulta gratuita hoy.",
+    "consultation": "Programar Consulta Gratuita",
+    "portfolio": "Ver Portafolio",
+    "emailPlaceholder": "Ingresa tu email para actualizaciones",
+    "subscribe": "Suscribirse",
+    "joinText": "Únete a más de 10,000 empresas que ya se están transformando con nuestras soluciones"
+  },
+  "footer": {
+    "description": "Transformando negocios a través de soluciones SaaS innovadoras, diseño inteligente e integración de IA.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "support": "Soporte",
+    "links": {
+      "saasDev": "Desarrollo SaaS",
+      "customSoftware": "Software Personalizado",
+      "uiux": "Diseño UI/UX",
+      "aiIntegration": "Integración de IA",
+      "aboutUs": "Acerca de Nosotros",
+      "team": "Nuestro Equipo",
+      "careers": "Carreras",
+      "contact": "Contacto",
+      "docs": "Documentación",
+      "help": "Centro de Ayuda",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    },
+    "copyright": "Todos los derechos reservados.",
+    "bottomLinks": {
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookies": "Cookies"
+    }
+  }
+}
