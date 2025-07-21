@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dmarmijosa-tls
+  namespace: danny-armijos
+spec:
+  secretName: dmarmijosa-tls
+  duration: 2160h # 90 días
+  renewBefore: 360h # 15 días
+  subject:
+    organizations:
+      - Danny Armijos
+  commonName: dmarmijosa.com
+  dnsNames:
+    - dmarmijosa.com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+    group: cert-manager.io
