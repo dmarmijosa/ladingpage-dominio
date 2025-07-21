@@ -9,7 +9,13 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
-    - http01:
+    - selector:
+        dnsNames:
+        - 'dmarmijosa.com'
+      http01:
         ingress:
           class: nginx
-          serviceType: ClusterIP
+          ingressTemplate:
+            metadata:
+              annotations:
+                cert-manager.io/issue-temporary-certificate: "true"
