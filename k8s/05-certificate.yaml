@@ -5,10 +5,9 @@ metadata:
   namespace: danny-armijos
 spec:
   secretName: dmarmijosa-tls
-  duration: 2160h
-  renewBefore: 360h
-  dnsNames:
-    - dmarmijosa.com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
+  commonName: dmarmijosa.com
+  dnsNames:
+    - dmarmijosa.com
