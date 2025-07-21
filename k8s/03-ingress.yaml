@@ -5,7 +5,7 @@ metadata:
   namespace: danny-armijos
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: letsencrypt-prod # Debe coincidir con tu ClusterIssuer
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
@@ -15,17 +15,17 @@ metadata:
       }
 spec:
   rules:
-  - host: dmarmijosa.com
+  - host: dmarmijosa.com # ¡Tu dominio!
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: landing-page
+            name: landing-page # Nombre de tu Service
             port:
-              number: 3000
+              number: 3000 # Puerto del Service
   tls:
   - hosts:
-    - dmarmijosa.com
-    secretName: dmarmijosa-tls-new # ¡CAMBIO AQUÍ! Ahora coincide con el archivo 05-certificate.yaml
+    - dmarmijosa.com # ¡Tu dominio!
+    secretName: dmarmijosa-tls # ¡Nombre del secreto TLS que creará cert-manager! (Debe coincidir con 05-certificate.yaml)

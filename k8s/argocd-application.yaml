@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: landing-page # Nombre de tu aplicación en Argo CD
+  namespace: argocd # Namespace donde está Argo CD
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/dmarmijosa/ladingpage-dominio.git # ¡La URL de tu repositorio!
+    targetRevision: main # La rama principal
+    path: k8s # La carpeta donde están tus manifiestos de Kubernetes
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: danny-armijos # El namespace donde se desplegará tu app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

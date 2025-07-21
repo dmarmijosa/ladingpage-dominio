@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: landing-page
+  name: landing-page # Nombre de tu despliegue
   namespace: danny-armijos
 spec:
-  replicas: 2
+  replicas: 2 # Puedes ajustar el número de réplicas
   selector:
     matchLabels:
       app: landing-page
@@ -14,12 +14,12 @@ spec:
         app: landing-page
     spec:
       containers:
-      - name: landing-page
-        image: dmarmijosa/landing-page:latest
+      - name: landing-page # Nombre del contenedor
+        image: dmarmijosa/landing-page:latest # Asegúrate de que esta es la imagen que construiste
         imagePullPolicy: Always
         ports:
         - name: http
-          containerPort: 3000
+          containerPort: 3000 # El puerto que expone tu aplicación Next.js
           protocol: TCP
         resources:
           requests:
@@ -40,3 +40,10 @@ spec:
             port: http
           initialDelaySeconds: 15
           periodSeconds: 10
+        # Si tienes secretos, agrégalos aquí:
+        # env:
+        #   - name: MY_SECRET_ENV_VAR
+        #     valueFrom:
+        #       secretKeyRef:
+        #         name: my-nextjs-secret # Nombre del Secret
+        #         key: API_KEY_NAME # Clave dentro del Secret

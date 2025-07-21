@@ -1,12 +1,22 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: dmarmijosa-tls-new
+  name: dmarmijosa-tls # Nombre del certificado
   namespace: danny-armijos
 spec:
-  secretName: dmarmijosa-tls-new
+  secretName: dmarmijosa-tls # ¡Este es el nombre del secreto que se creará y que tu Ingress debe usar!
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  subject:
+    organizations:
+      - Danny Armijos
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod # Debe coincidir con el nombre de tu ClusterIssuer
     kind: ClusterIssuer
+    group: cert-manager.io
+  commonName: dmarmijosa.com # ¡Tu dominio!
   dnsNames:
-    - dmarmijosa.com
+    - dmarmijosa.com # ¡Tu dominio!
+  usages:
+    - server auth
+    - client auth
