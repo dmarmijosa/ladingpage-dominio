@@ -28,4 +28,4 @@ spec:
   tls:
   - hosts:
     - dmarmijosa.com
-    secretName: landing-page-tls
+    secretName: dmarmijosa-tls-new

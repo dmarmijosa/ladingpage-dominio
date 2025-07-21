@@ -1,22 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: dmarmijosa-tls
+  name: dmarmijosa-tls-new
   namespace: danny-armijos
 spec:
-  secretName: dmarmijosa-tls
-  duration: 2160h # 90d
-  renewBefore: 360h # 15d
-  subject:
-    organizations:
-      - Danny Armijos
+  secretName: dmarmijosa-tls-new
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-    group: cert-manager.io
-  commonName: dmarmijosa.com
   dnsNames:
     - dmarmijosa.com
-  usages:
-    - server auth
-    - client auth
