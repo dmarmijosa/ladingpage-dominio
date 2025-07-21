@@ -4,7 +4,6 @@ metadata:
   name: landing-page
   namespace: landing-page
   annotations:
-    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod # Debe coincidir con tu ClusterIssuer
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
@@ -14,6 +13,7 @@ metadata:
         return 308 https://$host$request_uri;
       }
 spec:
+  ingressClassName: nginx
   rules:
   - host: dmarmijosa.com # ¡Tu dominio!
     http:
