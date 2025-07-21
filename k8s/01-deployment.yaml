@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: landing-page # Nombre de tu despliegue
-  namespace: danny-armijos
+  namespace: landing-page
 spec:
   replicas: 2 # Puedes ajustar el número de réplicas
   selector:

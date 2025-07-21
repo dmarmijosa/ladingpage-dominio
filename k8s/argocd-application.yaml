@@ -11,7 +11,7 @@ spec:
     path: k8s # La carpeta donde están tus manifiestos de Kubernetes
   destination:
     server: https://kubernetes.default.svc
-    namespace: danny-armijos # El namespace donde se desplegará tu app
+    namespace: landing-page # El namespace donde se desplegará tu app
   syncPolicy:
     automated:
       prune: true
