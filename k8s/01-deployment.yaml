@@ -16,8 +16,11 @@ spec:
       containers:
       - name: landing-page
         image: dmarmijosa/landing-page:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - name: http
+          containerPort: 3000
+          protocol: TCP
         resources:
           requests:
             cpu: "100m"
@@ -25,3 +28,15 @@ spec:
           limits:
             cpu: "500m"
             memory: "512Mi"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 15
+          periodSeconds: 10
