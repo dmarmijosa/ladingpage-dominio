@@ -28,4 +28,4 @@ spec:
   tls:
   - hosts:
     - dmarmijosa.com
-    secretName: dmarmijosa-tls-new
+    secretName: dmarmijosa-tls-new # ¡CAMBIO AQUÍ! Ahora coincide con el archivo 05-certificate.yaml
