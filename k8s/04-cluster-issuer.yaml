@@ -9,12 +9,6 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
-    - selector:
-        dnsZones:
-          - "dmarmijosa.com"
-      http01:
+    - http01:
         ingress:
           class: nginx
-      dns01:
-        cloudDNS:
-          project: your-project-id
